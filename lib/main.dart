@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/screen/home_page.dart';
+import 'package:language_learning_app/splash_screen.dart';
 
 void main() {
   runApp(const TokuApp());
@@ -12,7 +12,7 @@ class TokuApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplachView(),
     );
   }
 }
