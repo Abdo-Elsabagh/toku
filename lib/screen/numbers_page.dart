@@ -59,26 +59,16 @@ class NumbersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Numbers',
-          style: TextStyle(color: Colors.white),
+        appBar: AppBar(
+          title: const Text(
+            'Numbers',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: const Color(0xff46322B),
         ),
-        backgroundColor: const Color(0xff46322B),
-      ),
-      body: ListView(children: [
-        Item(number: numbers[0]),
-        Item(number: numbers[1]),
-        Item(number: numbers[2]),
-        Item(number: numbers[3]),
-        Item(number: numbers[4]),
-        Item(number: numbers[5]),
-        Item(number: numbers[6]),
-        Item(number: numbers[7]),
-        Item(number: numbers[8]),
-        Item(number: numbers[9]),
-      ]),
-    );
+        body: ListView(
+          children: getList(numbers),
+        ));
   }
 }
 
