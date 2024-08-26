@@ -56,6 +56,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/json_svg/
+    - assets/images/colors/
+    - assets/images/family_members/
+    - assets/images/numbers/
+    - assets/sounds/colors/
+    - assets/sounds/family_members/
+    - assets/sounds/numbers/
+    - assets/sounds/phrases/
+    
     
     
   # An image asset can refer to one or more resolution-specific "variants", see

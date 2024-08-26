@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/components/category_item.dart';
+import 'package:language_learning_app/screen/numbers_page.dart';
 import 'package:lottie/lottie.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,6 +22,11 @@ class HomePage extends StatelessWidget {
           Category(
             text: 'Numbers',
             color: const Color(0xffEF9235),
+            onTop: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const NumbersPage(),
+              ));
+            },
           ),
           Category(
             color: const Color(0xff558B37),
@@ -39,26 +46,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class Category extends StatelessWidget {
-  Category({super.key, this.color, this.text});
-  String? text;
-  Color? color;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      alignment: Alignment.centerLeft,
-      height: 65,
-      width: double.infinity,
-      color: color,
-      child: Text(
-        text!,
-        style: const TextStyle(fontSize: 22, color: Colors.white),
       ),
     );
   }
