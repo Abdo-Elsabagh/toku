@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_app/components/category_item.dart';
+import 'package:language_learning_app/screen/colors_page.dart';
+import 'package:language_learning_app/screen/family_members.dart';
 import 'package:language_learning_app/screen/numbers_page.dart';
 import 'package:lottie/lottie.dart';
 
@@ -29,10 +31,20 @@ class HomePage extends StatelessWidget {
             },
           ),
           Category(
+            onTop: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const FamilyMembersPage(),
+              ));
+            },
             color: const Color(0xff558B37),
             text: 'Family Membres',
           ),
           Category(
+            onTop: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const ColorsPage(),
+              ));
+            },
             text: 'Color',
             color: const Color(0xff79359F),
           ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/components/item.dart';
+import 'package:language_learning_app/components/list_item.dart';
 import 'package:language_learning_app/models/item.dart';
 
 class NumbersPage extends StatelessWidget {
@@ -80,7 +80,7 @@ class NumbersPage extends StatelessWidget {
         body: ListView.builder(
           itemCount: numbers.length,
           itemBuilder: (context, index) {
-            return Item(number: numbers[index]);
+            return Item(number: numbers[index], color: const Color(0xffEF9235));
           },
         ));
   }
