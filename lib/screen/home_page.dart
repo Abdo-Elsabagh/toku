@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_app/components/category_item.dart';
+import 'package:language_learning_app/screen/Phrases_page.dart';
 import 'package:language_learning_app/screen/colors_page.dart';
 import 'package:language_learning_app/screen/family_members.dart';
 import 'package:language_learning_app/screen/numbers_page.dart';
@@ -49,6 +50,11 @@ class HomePage extends StatelessWidget {
             color: const Color(0xff79359F),
           ),
           Category(
+            onTop: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const PhrasesPage(),
+              ));
+            },
             text: 'Phrases',
             color: const Color(0xff50ADC7),
           ),

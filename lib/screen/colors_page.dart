@@ -67,7 +67,7 @@ class ColorsPage extends StatelessWidget {
         itemCount: color.length,
         itemBuilder: (context, index) {
           return Item(
-            number: color[index],
+            item: color[index],
             color: const Color(0xff79359F),
           );
         },
