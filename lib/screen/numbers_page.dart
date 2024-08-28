@@ -9,7 +9,7 @@ class NumbersPage extends StatelessWidget {
     Number(
         image: 'assets/images/numbers/number_one.png',
         jpName: 'Ichi',
-        enName: 'one'),
+        enName: 'one',),
     Number(
         image: 'assets/images/numbers/number_two.png',
         jpName: 'Ni',
@@ -66,21 +66,24 @@ class NumbersPage extends StatelessWidget {
           ),
           backgroundColor: const Color(0xff46322B),
         ),
-        body: ListView(
-          children: getList(numbers),
+        body: ListView.builder(
+          itemCount: numbers.length,
+          itemBuilder: (context, index) {
+            return Item(number: numbers[index]);
+          },
         ));
   }
 }
 
-List<Widget> getList(List<Number> numbers) {
-  List<Widget> itemsList = [];
-  for (int i = 0; i < numbers.length; i++) {
-    itemsList.add(
-      Item(
-        number: numbers[i],
-      ),
-    );
-  }
+// List<Widget> getList(List<Number> numbers) {
+//   List<Widget> itemsList = [];
+//   for (int i = 0; i < numbers.length; i++) {
+//     itemsList.add(
+//       Item(
+//         number: numbers[i],
+//       ),
+//     );
+//   }
 
-  return itemsList;
-}
+//   return itemsList;
+// }
