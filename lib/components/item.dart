@@ -1,10 +1,10 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/models/number.dart';
+import 'package:language_learning_app/models/item.dart';
 
 class Item extends StatelessWidget {
   const Item({super.key, required this.number});
-  final Number number;
+  final ItemModel number;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +42,7 @@ class Item extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 final player = AudioPlayer();
-                player.play(AssetSource('sounds/colors/black.wav'));
+                player.play(AssetSource(number.sound));
               },
               icon: const Icon(
                 Icons.play_arrow,
